@@ -4,7 +4,7 @@
 #
 Name     : deprecated-zope.testrunner
 Version  : 4.8.1
-Release  : 30
+Release  : 31
 URL      : https://pypi.debian.net/zope.testrunner/zope.testrunner-4.8.1.tar.gz
 Source0  : https://pypi.debian.net/zope.testrunner/zope.testrunner-4.8.1.tar.gz
 Summary  : Zope testrunner script.
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554336471
+export SOURCE_DATE_EPOCH=1554339641
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -92,7 +92,7 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/zope-testrunner
+%exclude /usr/bin/zope-testrunner
 
 %files legacypython
 %defattr(-,root,root,-)
